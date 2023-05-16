@@ -61,5 +61,5 @@
      
       CMD [ "python3","server.py"]
    ```
-   ## side note: it's important to keep in mind when writing Docker files that each Instruction the docker file results in a sinlge new image layer being created for cache layers optimization. Leanr more [here](https://docs.docker.com/build/cache/)
+   #### side note: it's important to keep in mind when writing Docker files that each Instruction the docker file results in a sinlge new image layer being created for cache layers optimization. Leanr more [here](https://docs.docker.com/build/cache/)
    
