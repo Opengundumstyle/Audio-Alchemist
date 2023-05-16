@@ -6,6 +6,7 @@
 - Kubernetes
 - RabbitMQ
 - MongoDB
+- docker
 
 ## Setting up:
    in python environment folder under /auth:
