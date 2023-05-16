@@ -16,6 +16,9 @@
     4. `pip install --upgrade pip`,
     5. `pip install --upgrade pip` if needed
 
+   useful commends
+   `pip3 freeze > requirements.txt`:list of all the packages and their versions, allowing for easy replication of the environment in another location or by another user.
+
 
 ## key components
 - ### basic authentication
