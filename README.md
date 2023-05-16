@@ -14,3 +14,7 @@
     3. `pip install pylint`,
     4. `pip install --upgrade pip`,
     5. `pip install --upgrade pip` if needed
+
+
+## key components
+- basic authentication
