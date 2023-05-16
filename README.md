@@ -17,7 +17,10 @@
     5. `pip install --upgrade pip` if needed
 
    ### useful commands <br>
-   `pip3 freeze > requirements.txt`:list of all the packages and their versions, allowing for easy replication of the environment in another location or by another user.
+   - `pip3 freeze > requirements.txt`:list of all the packages and their versions, allowing for easy replication of the environment in another location or by another user.
+   - `docker build`:A fundamental command in Docker that allows you to create a reproducible image containing all the necessary dependencies and configurations for your application.
+   - `docker tag`:create a new tag for an existing Docker image. Tags are used to give meaningful names to different versions or variations of an image.
+
 
 
 ## key components
@@ -66,3 +69,4 @@
    ```
    ##### side note: It is essential to consider that each instruction in a Dockerfile creates a separate image layer, leading to optimization through caching layers for buildtime within CI/CD pipeline. Learn more <ins>[here](https://docs.docker.com/build/cache/)</ins>
    
+  
