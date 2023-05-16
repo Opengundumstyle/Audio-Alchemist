@@ -48,7 +48,8 @@
 
 - ### docker image
    <br>
-  `FROM python:3.10-slim-bullseye <br>
+  ```
+   FROM python:3.10-slim-bullseye <br>
    RUN apt-get update \<br>
    && apt-get install -y --no-install-recommends --no-install-suggests \<br>
    build-essentials default-libmysqlclient-dev \<br>
@@ -61,4 +62,5 @@
    COPY . /app<br>
    EXPOSE 5000<br>
    <br><br>
-   CMD [ "python3","server.py"]`
+   CMD [ "python3","server.py"]
+   ```
