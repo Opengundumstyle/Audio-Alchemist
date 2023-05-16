@@ -27,19 +27,22 @@
      <br>
       Let's break down each part:
 
-      #### Header:
+   #### Header:
 
-      `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9`
-      This is the JSON object containing the algorithm used for signing the token (in this case, "HS256" which stands for HMAC-SHA256) and the token type ("JWT").
+   `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9`
+   <br>
+   This is the JSON object containing the algorithm used for signing the token (in this case, "HS256" which stands for HMAC-SHA256) and the token type ("JWT").
 
-      #### Payload:
+   #### Payload:
 
-      `eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ`
-      This is the JSON object containing the claims or statements about the user. Claims can include user ID, name, expiration time, and any other custom data you want to include.
+   `eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ`
+    <br>
+   This is the JSON object containing the claims or statements about the user. Claims can include user ID, name, expiration time, and any other custom data you want to include.
 
-      #### Signature:
+   #### Signature:
 
-      `SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
-      This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
+   `SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
+    <br>
+   This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
 
    
