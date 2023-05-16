@@ -47,7 +47,7 @@
    This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
 
 - ### docker image
-
+   #### this Dockerfile sets up a container environment with Python 3.10, installs system dependencies, copies the application code and requirements, and specifies the command to run the application. It provides a reproducible and isolated environment for running the Python application using Docker.
    ``` FROM python:3.10-slim-bullseye 
       RUN apt-get update \
       && apt-get install -y --no-install-recommends --no-install-suggests \
@@ -62,3 +62,4 @@
      
       CMD [ "python3","server.py"]
    ```
+   
