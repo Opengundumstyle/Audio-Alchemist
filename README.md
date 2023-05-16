@@ -16,10 +16,20 @@
     4. `pip install --upgrade pip`,
     5. `pip install --upgrade pip` if needed
 
-   ### useful commands <br>
+   ### useful commands <br><br>
    - `pip3 freeze > requirements.txt`:list of all the packages and their versions, allowing for easy replication of the environment in another location or by another user.
    - `docker build`:A fundamental command in Docker that allows you to create a reproducible image containing all the necessary dependencies and configurations for your application.
    - `docker tag`:create a new tag for an existing Docker image. Tags are used to give meaningful names to different versions or variations of an image.
+   - `docker push`:This command is used to push a Docker image to a Docker repository, making it available for others to use or deploy.<br><br>Syntax: docker push [OPTIONS] NAME[:TAG] <br><br>
+It uploads the specified image to the Docker repository. The image is identified by its name and optional tag.
+Before pushing the image, ensure that you are authenticated with the Docker registry using docker login and have the necessary permissions to push to the repository.<br><br>
+   - `docker pull`:
+      This command is used to pull a Docker image from a Docker repository, downloading it to the local Docker host.<br><br>
+Syntax: docker pull [OPTIONS] NAME[:TAG|@DIGEST]<br><br>
+It fetches the specified image from the Docker repository and saves it locally on the Docker host.<br>
+The image is identified by its name, optional tag, or digest.
+If the tag is not specified, it defaults to the "latest" tag.
+Before pulling the image, ensure that you have access to the Docker repository and are authenticated if necessary.<br><br>
 
 
 
