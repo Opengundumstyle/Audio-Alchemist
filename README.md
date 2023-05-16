@@ -49,7 +49,7 @@
 - ### docker image
    <br>
   ```
-   FROM python:3.10-slim-bullseye <br>
+FROM python:3.10-slim-bullseye <br>
    RUN apt-get update \<br>
    && apt-get install -y --no-install-recommends --no-install-suggests \<br>
    build-essentials default-libmysqlclient-dev \<br>
