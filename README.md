@@ -46,4 +46,18 @@
     <br>
    This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
 
-   
+- ### docker image
+   <br>
+  `FROM python:3.10-slim-bullseye
+   RUN apt-get update \
+   && apt-get install -y --no-install-recommends --no-install-suggests \
+   build-essentials default-libmysqlclient-dev \
+   && pip install --no-cache-dir --upgrade pip
+
+   WORKDIR /app
+   COPY ./requirements.txt /app
+   RUN pip install --no-cache-dir --requirement /app/requirements.txt
+   COPY . /app
+   EXPOSE 5000
+
+   CMD [ "python3","server.py"]`
