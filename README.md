@@ -18,7 +18,7 @@
 
 ## key components
 - ### basic authentication
-   - jwt: 
+ - jwt: 
       A JWT consists of three parts: the header, the payload, and the signature. Each part is Base64Url encoded and concatenated with periods to form the complete JWT.
 
       Here's an example JWT:
