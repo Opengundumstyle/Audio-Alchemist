@@ -47,24 +47,19 @@
    This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
 
 - ### docker image
-  "": {
-  "prefix": "",
-  "body": [
-    "<br>",
-    "   FROM python:3.10-slim-bullseye <br>",
-    "   RUN apt-get update \\<br>",
-    "   && apt-get install -y --no-install-recommends --no-install-suggests \\<br>",
-    "   build-essentials default-libmysqlclient-dev \\<br>",
-    "   && pip install --no-cache-dir --upgrade pip<br>",
-    "   <br>",
-    "   <br>",
-    "   WORKDIR /app<br>",
-    "   COPY ./requirements.txt /app<br>",
-    "   RUN pip install --no-cache-dir --requirement /app/requirements.txt<br>",
-    "   COPY . /app<br>",
-    "   EXPOSE 5000<br>",
-    "   <br><br>",
-    "   CMD [ \"python3\",\"server.py\"]"
-  ],
-  "description": ""
-}
+
+   ``` FROM python:3.10-slim-bullseye <br>
+      RUN apt-get update \<br>
+      && apt-get install -y --no-install-recommends --no-install-suggests \<br>
+      build-essentials default-libmysqlclient-dev \<br>
+      && pip install --no-cache-dir --upgrade pip<br>
+      <br>
+      <br>
+      WORKDIR /app<br>
+      COPY ./requirements.txt /app<br>
+      RUN pip install --no-cache-dir --requirement /app/requirements.txt<br>
+      COPY . /app<br>
+      EXPOSE 5000<br>
+      <br><br>
+      CMD [ "python3","server.py"]
+   ```
