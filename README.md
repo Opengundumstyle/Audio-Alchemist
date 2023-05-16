@@ -48,7 +48,7 @@
 
 - ### docker image
    <br>
-  ```
+   ```
 FROM python:3.10-slim-bullseye <br>
    RUN apt-get update \<br>
    && apt-get install -y --no-install-recommends --no-install-suggests \<br>
@@ -63,4 +63,3 @@ FROM python:3.10-slim-bullseye <br>
    EXPOSE 5000<br>
    <br><br>
    CMD [ "python3","server.py"]
-   ```
