@@ -61,5 +61,5 @@
      
       CMD [ "python3","server.py"]
    ```
-   ##### side note: It is essential to consider that each instruction in a Dockerfile creates a separate image layer, leading to optimization through caching layers. Learn more <ins>[here](https://docs.docker.com/build/cache/)</ins>
+   ##### side note: It is essential to consider that each instruction in a Dockerfile creates a separate image layer, leading to optimization through caching layers for buildtime within CI/CD pipeline. Learn more <ins>[here](https://docs.docker.com/build/cache/)</ins>
    
