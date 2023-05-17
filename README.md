@@ -107,4 +107,6 @@ Before pulling the image, ensure that you have access to the Docker repository a
 5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.
 ### What is Kubernetes ?
 
-### What about Pod ?                                                                                                        
+### What about Pod ?    
+In Kubernetes, a Pod is the smallest and simplest unit of the platform. It represents a single instance of a running process within the cluster. A Pod encapsulates one or more containers, storage resources, and network settings that are tightly coupled and need to be co-located and co-scheduled. more: https://kubernetes.io/docs/concepts/workloads/pods/
+
