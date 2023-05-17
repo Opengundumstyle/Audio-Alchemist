@@ -105,8 +105,14 @@ Before pulling the image, ensure that you have access to the Docker repository a
 4. run `k9s` to view minikube Pods(hit 0)<br>
 ![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)
 5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.
-### What is Kubernetes ?
+  ### Why Kubernetes ?
+Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
 
-### What about Pod ?    
-In Kubernetes, a Pod is the smallest and simplest unit of the platform. It represents a single instance of a running process within the cluster. A Pod encapsulates one or more containers, storage resources, and network settings that are tightly coupled and need to be co-located and co-scheduled. more: https://kubernetes.io/docs/concepts/workloads/pods/
+kubernetes also makes manually scaling pods more streamlined. For ex, say if there's a service that [load balancing](https://aws.amazon.com/what-is/load-balancing/) requests to individual pod using [Round-robin](https://en.wikipedia.org/wiki/Round-robin_scheduling), and that service is experiencing more traffic than the number of available pods can handle. As a result of this, we want to scale our service up from two to five pods. Without kubernetes,in a situation like this we'll likely need to go manually deploy each individual additional pod and then reconfigure the load balancer to include the new pods in the round-robin algorithm. But kubernete handles all of this for us, by running this one line of command `kubectl scale deployment --replicas=6 service `
+
+in summary, with kubernetes we can cluster together a bunch of containerized services and easily orchestrate the deployment and management of these services using what we call kubernetes objects which are persisted entities in the kubernetes system.<br> 
+ #### learn more about [kubernetes objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/)
+
+  ### What is a Pod ?    
+In Kubernetes, a Pod is the smallest and simplest unit of the platform. It represents a single instance of a running process within the cluster. A Pod encapsulates one or more containers, storage resources, and network settings that are tightly coupled and need to be co-located and co-scheduled. [Learn more](https://kubernetes.io/docs/concepts/workloads/pods/)
 
