@@ -106,4 +106,5 @@ Before pulling the image, ensure that you have access to the Docker repository a
 ![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)
 5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.
 ### What is Kubernetes ?
-                                                                                                              
+
+### What about Pod ?                                                                                                        
