@@ -96,12 +96,14 @@ Before pulling the image, ensure that you have access to the Docker repository a
   1. create manifests folder <br>
   2. and some yaml files ...
   
-  ### what is yaml? 
-  In brief : YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
+   ### what is yaml ? 
+  In brief : YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for   both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
   
-  In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml`,`configmap.yaml`,`secret.yaml` and `service.yaml`
+  In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml`,`configmap.yaml`,`secret.yaml` and    `service.yaml`
   
 3. run minikube (deploy auth service to clusters) - command `minikube start`
 4. run `k9s` to view minikube Pods(hit 0)<br>
 ![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)
+5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.
+### What is Kubernetes ?
                                                                                                               
