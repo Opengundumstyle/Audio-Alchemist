@@ -101,5 +101,5 @@ Before pulling the image, ensure that you have access to the Docker repository a
   
   In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml`,`configmap.yaml`,`secret.yaml` and `service.yaml`
   
-  3. run minikube
+  3. run minikube (deploy auth service to clusters)
   
