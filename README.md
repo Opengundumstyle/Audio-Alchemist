@@ -34,7 +34,11 @@ Before pulling the image, ensure that you have access to the Docker repository a
 
 
 ## key components
-- ### basic authentication
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+  <h3 style="text-align: center;">Basic Authentication</h3>
+  <img src="https://user-images.githubusercontent.com/5418178/177059352-fe91dcd5-e17b-4103-88ae-70d6d396cf85.png" alt="jwt" width="50" height="50" />
+</div>
+
   #### client will receive jwt as login - A JWT consists of three parts: the header, the payload, and the signature. Each part is Base64Url encoded and concatenated with periods to form the complete JWT.
 
   Here's an example JWT:
@@ -60,8 +64,12 @@ Before pulling the image, ensure that you have access to the Docker repository a
    `SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
     <br>
    This is the signature created by combining the encoded header, encoded payload, and a secret key. The server can use the secret key to verify the integrity of the token and ensure it hasn't been tampered with.
+ <hr>
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+  <h3 style="text-align: center;">docker image</h3>
+  <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=docker" alt="Docker Icon" /></a>
+</div>
 
-- ### docker image
    #### this Dockerfile sets up a container environment with Python 3.10, installs system dependencies, copies the application code and requirements, and specifies the command to run the application. It provides a reproducible and isolated environment for running the Python application using Docker.
    ``` FROM python:3.10-slim-bullseye 
       RUN apt-get update \
@@ -78,5 +86,11 @@ Before pulling the image, ensure that you have access to the Docker repository a
       CMD [ "python3","server.py"]
    ```
    ##### side note: It is essential to consider that each instruction in a Dockerfile creates a separate image layer, leading to optimization through caching layers for buildtime within CI/CD pipeline. Learn more <ins>[here](https://docs.docker.com/build/cache/)</ins>
+   
+  <hr>
+ <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+  <h3 style="text-align: center;">Kubernetes Configuration</h3>
+  <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernate Icon" /></a>
+</div>
    
   
