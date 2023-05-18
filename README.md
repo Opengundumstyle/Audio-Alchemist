@@ -12,9 +12,6 @@
    in python environment folder under /auth:
     1.`source ./venv/bin/activate`,
     2. `env | grep VIRTUAL`,
-    
-  ### For new environment
-   
     3. `pip install pylint`,
     4. `pip install --upgrade pip`,
     5. `pip install --upgrade pip` if needed
@@ -36,6 +33,9 @@ Before pulling the image, ensure that you have access to the Docker repository a
 
 - `pyhton3 -m venv venv`
 - `source ./venv/bin/activate`
+ 
+**For new environment:**
+
 - `env | grep ENV`
 - `pip install jedi`
 - `pip install pylint`
