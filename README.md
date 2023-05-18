@@ -119,6 +119,9 @@ YAML (YAML Ain't Markup Language) is a human-readable data serialization format 
   - **metadata** - Data that helps uniquely identify the object, including a name string, UID, and optional namespace
 
   - **spec** - What state you desire for the object
+  
+  then, we want to configure the spec for specific types of object with [Kubernetes API Reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+  
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
 
