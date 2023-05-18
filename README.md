@@ -93,20 +93,24 @@ Before pulling the image, ensure that you have access to the Docker repository a
   <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernate Icon" /></a>
 </div>
   <br>
-  1. create manifests folder <br>
-  2. and some yaml files ...
+  1. create manifests folder 
+  <br>
+  2. and some yaml files ... In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: auth-deploy.yaml , configmap.yaml , secret.yaml and  service.yaml
+  <br>
+  3. run minikube (deploy auth service to clusters) - command  `minikube start` 
+  <br>
+  4. run `k9s` to view minikube Pods(hit 0)
+  <br>
+  
+  ![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)<br>
+
+  5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.<br>
+  
+ ### what is yaml ? 
+YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for  both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
+  
  
-  <a name="custom_anchor_name"></a>
   
-  ### what is yaml ? 
- In brief : YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for   both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
-  
-  In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml`,`configmap.yaml`,`secret.yaml` and    `service.yaml`
-  
-3. run minikube (deploy auth service to clusters) - command `minikube start`
-4. run `k9s` to view minikube Pods(hit 0)<br>
-![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)
-5. last but not least run  `kubectl apply -f ./` so we can apply all the Kubernetes resource configurations found in the current directory.
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
 
