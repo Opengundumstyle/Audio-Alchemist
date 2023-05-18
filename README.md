@@ -127,6 +127,36 @@ YAML (YAML Ain't Markup Language) is a human-readable data serialization format 
     <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/spec.png" width="400" height="300">
   </p>
   
+Proceed to  - **spec(DeploymentSpec):**
+      <p align="center">
+         <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/dynamicspc.png" width="400" height="350">
+      </p>
+    
+  #### See how the shape of the structure is matched :point_down:
+    
+   
+                                             apiVersion: apps/v1
+                                                kind: Deployment
+                                                metadata:
+                                                  name: auth
+                                                  labels:
+                                                    app: auth
+                                                spec:
+                                                  replicas: 2
+                                                  selector:
+                                                    matchLabels:
+                                                      app: auth
+                                                  strategy:
+                                                    type: RollingUpdate
+                                                    rollingUpdate:
+                                                      maxSurge: 3
+                                                  template:
+                                                    metadata:
+                                                      labels:
+                                                        app: auth
+
+
+    
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
 
