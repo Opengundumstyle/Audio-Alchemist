@@ -34,6 +34,8 @@ Before pulling the image, ensure that you have access to the Docker repository a
 - `pyhton3 -m venv venv`
 - `source ./venv/bin/activate`
 - `env | grep ENV`
+- `pip install jedi`
+- `pip install pylint`
 
 ## key components
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
