@@ -186,3 +186,11 @@ Bringing it all together, we can say that kubernetes clusters is comprised of a 
   <h3 style="text-align: center;">Gateway</h3>
   <img src="https://github.com/aquasecurity/cloudsec-icons/blob/main/src/Gateway_Aqua.svg" alt="jwt" width="50" height="50" />
 </div>
+
+#### MongoDB
+connect mongo with flask server:
+
+      server  = Flask(__name__)
+      server.config['MONGO_URI'] = 'mongodb://host.minikube.internal:27017/videos'
+      mongo = PyMongo(server)
+
