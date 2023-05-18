@@ -31,7 +31,9 @@ The image is identified by its name, optional tag, or digest.
 If the tag is not specified, it defaults to the "latest" tag.
 Before pulling the image, ensure that you have access to the Docker repository and are authenticated if necessary.<br><br>
 
-
+- `pyhton3 -m venv venv`
+- `source ./venv/bin/activate`
+- `env | grep ENV`
 
 ## key components
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
