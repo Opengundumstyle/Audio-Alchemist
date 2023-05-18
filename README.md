@@ -92,15 +92,15 @@ Before pulling the image, ensure that you have access to the Docker repository a
   <h3 style="text-align: center;">Kubernetes Configuration</h3>
   <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernate Icon" /></a>
 </div>
-  <br>
+
   1. create manifests folder 
-  <br>
-  2. and some yaml files ... In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: auth-deploy.yaml , configmap.yaml , secret.yaml and  service.yaml
-  <br>
+  
+  2. add some yaml files ... In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml` , `configmap.yaml` , `secret.yaml` and  `service.yaml`
+
   3. run minikube (deploy auth service to clusters) - command `minikube start` 
-  <br>
+ 
   4. run `k9s` to view minikube Pods(hit 0)
-  <br>
+
   
   ![minikube Pods](https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/python/src/auth/minikubepods.png)<br>
 
