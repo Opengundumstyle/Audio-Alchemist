@@ -123,6 +123,9 @@ YAML (YAML Ain't Markup Language) is a human-readable data serialization format 
   then, we want to configure the spec for specific types of object with [Kubernetes API Reference](https://kubernetes.io/docs/reference/kubernetes-api/)
   
   from here, we have the freedom to use different set ups base on the kind of object. let's say we want to configure deployment, then we should go to **Workload Resources** -> **Deployment**. There we will see all the fields option within the metadata and spec
+ <p align="center">
+    <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/spec.png" width="400" height="300">
+  </p>
   
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
