@@ -95,9 +95,11 @@ Before pulling the image, ensure that you have access to the Docker repository a
   <br>
   1. create manifests folder <br>
   2. and some yaml files ...
+ 
+  <a name="custom_anchor_name"></a>
   
-   ### what is yaml ? 
-  In brief : YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for   both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
+  ### what is yaml ? 
+ In brief : YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for   both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
   
   In this project there are four and are commonly used in the context of deploying applications in a Kubernetes cluster: `auth-deploy.yaml`,`configmap.yaml`,`secret.yaml` and    `service.yaml`
   
@@ -117,5 +119,5 @@ in summary, with kubernetes we can cluster together a bunch of containerized ser
 In Kubernetes, a Pod is the smallest and simplest unit of the platform. It represents a single instance of a running process within the cluster. A Pod encapsulates one or more containers, storage resources, and network settings that are tightly coupled and need to be co-located and co-scheduled. [Learn more](https://kubernetes.io/docs/concepts/workloads/pods/)
 
 ### Summary:
-Bringing it all together, we can say that kubernetes clusters is comprised of a bunch of objects that we've configured that describe our cluster's intended state. From there kubernetes will continually compare the current status or state of those objects to the specification or desired state from our original configuration and if that comparison ever differs, kubernetes will automatically make adjustments to match the current status the original record of intent,which is acheived by the [kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/).
+Bringing it all together, we can say that kubernetes clusters is comprised of a bunch of objects that we've configured (with the [yaml files](#custom_anchor_name) we mentioned earlier)that describe our cluster's intended state. From there kubernetes will continually compare the current status or state of those objects to the specification or desired state from our original configuration and if that comparison ever differs, kubernetes will automatically make adjustments to match the current status the original record of intent,which is acheived by the [kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/).
  
