@@ -193,4 +193,8 @@ connect mongo with flask server:
       server  = Flask(__name__)
       server.config['MONGO_URI'] = 'mongodb://host.minikube.internal:27017/videos'
       mongo = PyMongo(server)
+      
+use **Gridf** to wrap mongoDB,so we can store and retreive files that exceedthe BSON-document size limit of 16MB 
+
+``` fs = gridfs.GridFS(mongo.db) ```
 
