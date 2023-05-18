@@ -215,6 +215,6 @@ use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongo
 
    **Remote Procedure Call (RPC)**: RPC frameworks provide a way to invoke remote methods or functions on other services and wait for the result. This approach abstracts the communication details and allows you to work with remote services as if they were local. Examples of RPC frameworks include Apache Thrift, Apache Avro, and gRPC (mentioned earlier).
 
-   When implementing synchronous interservice communication, consider the latency and potential failure scenarios that could impact the overall performance and reliability of your system. It's essential to design your services and choose appropriate technologies based on your specific requirements, scalability needs, and performance expectations.
+   When implementing synchronous interservice communication, consider the latency and potential failure scenarios that could impact the overall performance and reliability of your system. It's essential to design your services and choose appropriate technologies based on your specific requirements, scalability needs, and performance expectations. __One place we use such mechanism was with user login - our gateway service communicate with our auth service synchronously, so when we send a post request to auth serice from the gateway to retreive a jwt token,our gateway service is blocked until auth service return a jwt or error.__ Making those two services tightly coupled increases the system security. 
    
  - #### Asynchronous Interservice Communication
