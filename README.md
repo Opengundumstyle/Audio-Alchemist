@@ -116,3 +116,6 @@ in summary, with kubernetes we can cluster together a bunch of containerized ser
   ### What is a Pod ?    
 In Kubernetes, a Pod is the smallest and simplest unit of the platform. It represents a single instance of a running process within the cluster. A Pod encapsulates one or more containers, storage resources, and network settings that are tightly coupled and need to be co-located and co-scheduled. [Learn more](https://kubernetes.io/docs/concepts/workloads/pods/)
 
+### Summary:
+Bringing it all together, we can say that kubernetes clusters is comprised of a bunch of objects that we've configured that describe our cluster's intended state. From there kubernetes will continually compare the current status or state of those objects to the specification or desired state from our original configuration and if that comparison ever differs, kubernetes will automatically make adjustments to match the current status the original record of intent,which is acheived by the [kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/).
+ 
