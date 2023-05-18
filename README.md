@@ -202,3 +202,19 @@ use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongo
 ## key Terms
 ### Synchronous & Asynchronous Interservice Communication
 - #### Synchronous Interservice Communication
+
+   Synchronous interservice communication refers to a communication pattern where services exchange information in a request-response manner, waiting for a response before proceeding. In this pattern, one service sends a request to another service and waits until it receives a response.
+
+   Here are a few common approaches for achieving synchronous interservice communication:
+
+   **HTTP Request-Response**: Services can communicate synchronously over HTTP using request-response protocols such as REST (Representational State Transfer) or GraphQL. One service sends an HTTP request to another service and waits for the corresponding response. This approach is widely used and supported by most programming languages and frameworks.
+
+   **gRPC**: gRPC is a modern high-performance framework that enables synchronous communication between services using a binary protocol over HTTP/2. It allows you to define service interfaces and generate client and server code in various programming languages. gRPC provides strong typing, efficient serialization, and features like bidirectional streaming.
+
+   **Messaging Queues with Request-Reply**: Messaging queues can also be used for synchronous communication. One service publishes a request message to a message queue, and the receiving service processes the request and sends back a response message to a designated reply queue. The requesting service waits for the response by consuming messages from the reply queue. RabbitMQ and Apache Kafka are popular messaging queue systems that can support this pattern.
+
+   **Remote Procedure Call (RPC)**: RPC frameworks provide a way to invoke remote methods or functions on other services and wait for the result. This approach abstracts the communication details and allows you to work with remote services as if they were local. Examples of RPC frameworks include Apache Thrift, Apache Avro, and gRPC (mentioned earlier).
+
+   When implementing synchronous interservice communication, consider the latency and potential failure scenarios that could impact the overall performance and reliability of your system. It's essential to design your services and choose appropriate technologies based on your specific requirements, scalability needs, and performance expectations.
+   
+ - #### Asynchronous Interservice Communication
