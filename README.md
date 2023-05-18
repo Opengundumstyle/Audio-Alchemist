@@ -198,3 +198,6 @@ use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongo
 
 ``` fs = gridfs.GridFS(mongo.db) ```
 
+
+## key Terms
+### Asynchronous & Synchronous Interservice Communication
