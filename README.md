@@ -110,7 +110,15 @@ Before pulling the image, ensure that you have access to the Docker repository a
 YAML (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files. YAML files use a plain-text syntax that is easy for  both humans and machines to read and write. In my understanding, they are the private and public environment variables that support the clusters
   
  #### how to write them <img width="25" height="25" src="https://img.icons8.com/fluency/48/hand-with-pen.png" alt="hand-with-pen"/>
+  first, we start with the require fields: 
   
+  - **apiVersion** - Which version of the Kubernetes API you're using to create this object
+  
+  - **kind** - What kind of object you want to create
+  
+  - **metadata** - Data that helps uniquely identify the object, including a name string, UID, and optional namespace
+
+  - **spec** - What state you desire for the object
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
 
