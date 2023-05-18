@@ -67,7 +67,7 @@ Before pulling the image, ensure that you have access to the Docker repository a
  <hr>
 <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
   <h3 style="text-align: center;">docker image</h3>
-  <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=docker" alt="Docker Icon" /></a>
+  <a href="https://skillicons.dev" style="text-align: center;"><img src="https://github.com/aquasecurity/cloudsec-icons/blob/main/src/Images_Aqua.svg" alt="Docker Icon" width="50" height="50" /></a>
 </div>
 
    #### this Dockerfile sets up a container environment with Python 3.10, installs system dependencies, copies the application code and requirements, and specifies the command to run the application. It provides a reproducible and isolated environment for running the Python application using Docker.
@@ -89,8 +89,11 @@ Before pulling the image, ensure that you have access to the Docker repository a
    
   <hr>
  <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
-  <h3 style="text-align: center;">Kubernetes Configuration</h3>
-  <a href="https://skillicons.dev" style="text-align: center;"><img src="https://skillicons.dev/icons?i=kubernetes" alt="Kubernate Icon" /></a>
+ 
+ <h3 style="text-align: center;">Kubernetes Configuration</h3>
+
+ <img src="https://github.com/aquasecurity/cloudsec-icons/blob/main/src/Kubernetes_Aqua.svg" alt="Kubernate Icon" width="50" height="50"/>
+
 </div>
 
   1. create manifests folder 
@@ -170,4 +173,9 @@ In Kubernetes, a Pod is the smallest and simplest unit of the platform. It repre
 
 ### Summary:
 Bringing it all together, we can say that kubernetes clusters is comprised of a bunch of objects that we've configured (with the [yaml files](#custom_anchor_name) we mentioned earlier)that describe our cluster's intended state. From there kubernetes will continually compare the current status or state of those objects to the specification or desired state from our original configuration and if that comparison ever differs, kubernetes will automatically make adjustments to match the current status the original record of intent,which is acheived by the [kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/).
- 
+<hr/>
+
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+  <h3 style="text-align: center;">Gateway</h3>
+  <img src="https://github.com/aquasecurity/cloudsec-icons/blob/main/src/Gateway_Aqua.svg" alt="jwt" width="50" height="50" />
+</div>
