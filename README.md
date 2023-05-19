@@ -205,7 +205,13 @@ create connection:
    connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
    channel = connection.channel()
 ```
-
+#### End Points
+- log in
+  `@server.route("/login",methods=["POST"])`
+- upload
+  `@server.route("/upload",method=["POST"])`
+- download
+  `@server.route("/download",methods=["GET"])`
 
 ## key Terms
 ### Synchronous & Asynchronous Interservice Communication
