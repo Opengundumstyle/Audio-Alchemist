@@ -206,7 +206,13 @@ create connection:
    channel = connection.channel()
 ```
 <h5>how rabbitMQ works?</h5>
-At its core, RabbitMQ acts as a mediator between various components of a distributed system, allowing them to send and receive messages in a reliable and asynchronous manner. It provides a flexible and scalable solution for building robust, decoupled systems by facilitating communication between different services or applications.
+At its core, RabbitMQ acts as a mediator between various components of a distributed system, allowing them to send and receive messages in a reliable and asynchronous manner. It provides a flexible and scalable solution for building robust, decoupled systems by facilitating communication between different services or applications.<br><br>
+
+**Intergration of rabbitMQ for this project:** 
+
+ <p align="center">
+    <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/rabbitMQ.png" width="400" height="450">
+  </p>
 
 #### End Points
 - log in
