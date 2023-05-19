@@ -221,6 +221,7 @@ use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongo
    Asynchronous interservice communication refers to a communication pattern where services exchange information without waiting for an immediate response. Instead of blocking and waiting for a response, the requesting service continues its execution and can handle other tasks. The response, when available, is typically sent to the requesting service through a callback mechanism or by publishing it to a message queue.
 
    Our approach for achieving asynchronous interservice communication is to use a 
-   **Message Queues**: Services can communicate asynchronously using message queue systems such as RabbitMQ, Apache Kafka, or ActiveMQ. One service publishes a message to a specific queue or topic, and other services interested in that message consume it when they are ready. This decouples the sender and receiver, allowing them to operate independently.
+   **Message Queue**: Services can communicate asynchronously using message queue systems such as RabbitMQ, Apache Kafka, or ActiveMQ. One service publishes a message to a specific queue or topic, and other services interested in that message consume it when they are ready. This decouples the sender and receiver, allowing them to operate independently.
+   For our current architecture, out api gateway sends request to the converter service in the form of messages on the queue, but it doesn't need to wait for the response from the converter service. It essentially just sends and forget the service.  Same with the convertor serice and notification service.
 
   
