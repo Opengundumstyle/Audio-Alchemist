@@ -165,7 +165,13 @@ Proceed to  - **spec(DeploymentSpec):**
                                                       labels:
                                                         app: auth
 
-
+  
+  __additional info for yaml files__
+  
+  - Ingress:
+    
+    
+    
     
   ### Why Kubernetes ?
 Kubernetes eliminates many of the manual processes involved in deploying and scaling containerized applications.For example, if we can configure a service to have four pods, kubernetes will keep track of how many pods are running and if any of the pods goes down for any reason, kubernetes will automatically scale the deployment so that the number of Pods matches the configure amount. 
