@@ -218,3 +218,18 @@ use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongo
    When implementing synchronous interservice communication, consider the latency and potential failure scenarios that could impact the overall performance and reliability of your system. It's essential to design your services and choose appropriate technologies based on your specific requirements, scalability needs, and performance expectations. __One place we use such mechanism was with user login - our gateway service communicate with our auth service synchronously, so when we send a post request to auth serice from the gateway to retreive a jwt token,our gateway service is blocked until auth service return a jwt or error.__ Making those two services tightly coupled increases the system security. 
    
  - #### Asynchronous Interservice Communication
+   Asynchronous interservice communication refers to a communication pattern where services exchange information without waiting for an immediate response. Instead of blocking and waiting for a response, the requesting service continues its execution and can handle other tasks. The response, when available, is typically sent to the requesting service through a callback mechanism or by publishing it to a message queue.
+
+   Here are some common approaches for achieving asynchronous interservice communication:
+
+   **Message Queues**: Services can communicate asynchronously using message queue systems such as RabbitMQ, Apache Kafka, or ActiveMQ. One service publishes a message to a specific queue or topic, and other services interested in that message consume it when they are ready. This decouples the sender and receiver, allowing them to operate independently.
+
+   **Publish/Subscribe (Pub/Sub) Pattern**: Pub/Sub systems enable asynchronous communication by allowing services to publish messages to topics, and interested services subscribe to those topics to receive messages. Services publish messages without being aware of the subscribers. Pub/Sub systems like Apache Kafka, AWS SNS (Simple Notification Service), or Google Cloud Pub/Sub are commonly used for this pattern.
+
+   **Event-Driven Architecture**: In an event-driven architecture, services communicate asynchronously by producing and consuming events. Events represent significant occurrences or state changes within the system. Services can publish events, and other services can subscribe to specific event types. This approach enables loose coupling and scalability. Technologies like Apache Kafka, AWS EventBridge, or Azure Event Grid can support event-driven communication.
+
+   **Callbacks and Webhooks**: Services can communicate asynchronously by using callbacks or webhooks. The requesting service sends a request to another service and includes a callback URL or webhook endpoint. The receiving service processes the request and, instead of sending an immediate response, sends the result or updates to the callback URL or webhook endpoint provided by the requesting service. The requesting service can handle the response asynchronously when it becomes available.
+
+   **Reactive Streams**: Reactive programming and streaming frameworks such as RxJava, Reactor, or Akka Streams provide abstractions and patterns for handling asynchronous communication. They allow services to express and consume streams of data asynchronously, enabling efficient and non-blocking communication between services.
+
+   When implementing asynchronous interservice communication, it's important to handle potential failure scenarios, such as message loss or service unavailability. Consider using mechanisms like retries, dead-letter queues, or circuit breakers to enhance resilience and reliability in your communication flow.
