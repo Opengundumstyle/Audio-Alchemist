@@ -188,7 +188,7 @@ Bringing it all together, we can say that kubernetes clusters is comprised of a 
 </div>
 
 #### MongoDB
-connect mongo with flask server:
+connect mongo with gateway server:
 
       server  = Flask(__name__)
       server.config['MONGO_URI'] = 'mongodb://host.minikube.internal:27017/videos'
@@ -197,6 +197,14 @@ connect mongo with flask server:
 use [**Gridfs**](https://www.mongodb.com/docs/manual/core/gridfs/) to wrap mongoDB,so we can store and retreive files that exceedthe BSON-document size limit of 16MB 
 
 ``` fs = gridfs.GridFS(mongo.db) ```
+
+#### RabbitMQ
+create connection:
+
+```
+   connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
+   channel = connection.channel()
+```
 
 
 ## key Terms
