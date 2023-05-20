@@ -220,7 +220,37 @@ At its core, RabbitMQ acts as a mediator between various components of a distrib
     <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/rabbitMQ.png" width="400" height="450">
   </p>
   
- <h4>We are also going to implement StatefulSet to ensure the persistency of messages within the queue:</h4>
+ #### We are also going to implement StatefulSet to ensure the persistency of messages within the queue:
+ 
+                                          spec:
+                                             containers:
+                                               - name: rabbitmq
+                                                 image: rabbitmq:3-management
+                                                 ports:
+                                                   - name: http
+                                                     protocol: TCP
+                                                     containerPort: 15672
+                                                   - name: amqp
+                                                     protocol: TCP
+                                                     containerPort: 5672
+                                                 envFrom:
+                                                   - configMapRef:
+                                                       name: rabbitmq-configmap
+                                                   - secretRef:
+                                                       name: rabbitmq-secret
+                                                 volumeMounts:
+                                                   - mountPath: "/var/lib/rabbitmq"
+                                                     name: rabbitmq-volume
+                                             volumes:
+                                               - name: rabbitmq-volume
+                                                 persistentVolumeClaim:
+                                                   claimName: rabbitmq-pvc
+                                                   
+   The mountPath at "/var/lib/rabbitmq" configures where in our container we want the physical storage valume to mount to. Basically everything that are saved in this rabbitmq directory within the container will persist even if the container fails.  
+   
+   **persistent volume claim**:
+   
+   we want to link the stateful set with the persistent volume claim. When a pod needs persistent storage, it creates a PVC object that specifies the desired properties of the storage, such as size, access mode, and storage class. The storage class defines the type and properties of the underlying storage provisioner, such as whether it's provided by cloud storage, local storage, or a networked storage system.
  
    StatefulSets integrate with persistent volumes to provide persistent storage for each Pod. Each Pod in a StatefulSet has its own dedicated volume that retains data even if the Pod is restarted or rescheduled to a different node. This ensures that stateful applications can store and access their data reliably.
    
