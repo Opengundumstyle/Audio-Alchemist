@@ -221,7 +221,9 @@ At its core, RabbitMQ acts as a mediator between various components of a distrib
   </p>
   
  <h4>We are also going to implement StatefulSet to ensure the persistency of messages within the queue:</h4>
-
+ 
+   StatefulSets integrate with persistent volumes to provide persistent storage for each Pod. Each Pod in a StatefulSet has its own dedicated volume that retains data even if the Pod is restarted or rescheduled to a different node. This ensures that stateful applications can store and access their data reliably.
+   
 #### End Points
 - log in
   `@server.route("/login",methods=["POST"])`
