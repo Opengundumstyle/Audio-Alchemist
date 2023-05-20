@@ -219,6 +219,8 @@ At its core, RabbitMQ acts as a mediator between various components of a distrib
  <p align="center">
     <img src="https://github.com/Opengundumstyle/Audio-Alchemist/blob/main/rabbitMQ.png" width="400" height="450">
   </p>
+  
+ <h4>We are also going to implement StatefulSet to ensure the persistency of messages within the queue:</h4>
 
 #### End Points
 - log in
