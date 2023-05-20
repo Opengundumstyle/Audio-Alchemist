@@ -168,8 +168,8 @@ Proceed to  - **spec(DeploymentSpec):**
   
   __additional info for yaml files__
   
-  - Ingress:
-    
+  - __Ingress:__
+     an Ingress allows you to expose your services to the outside world, enabling external clients to access them using a single IP address and a well-defined set of rules. Instead of exposing each service individually, you can configure the Ingress to handle the traffic and distribute it to the appropriate services based on the specified rules.
     
     
     
