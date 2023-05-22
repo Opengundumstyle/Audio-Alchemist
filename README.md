@@ -261,6 +261,13 @@ At its core, RabbitMQ acts as a mediator between various components of a distrib
   `@server.route("/upload",method=["POST"])`
 - download
   `@server.route("/download",methods=["GET"])`
+  
+<hr/>
+
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+  <h3 style="text-align: center;">Converter</h3>
+  <img src="https://github.com/aquasecurity/cloudsec-icons/blob/main/src/Import_Aqua.svg" alt="converter" width="50" height="50" />
+</div>
 
 ## key Terms
 ### Synchronous & Asynchronous Interservice Communication
