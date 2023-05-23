@@ -4,7 +4,7 @@ from flask_mysqldb import MySQL
 
 #application
 server = Flask(__name__)
-mysql = MySQL(server)
+mysql = MySQL(app=server)
 
 #config
 
@@ -21,6 +21,7 @@ def login():
             return "missing credentials",401
      
       #check db for username and password
+    
       cur = mysql.connection.cursor()
       res = cur.execute(
              "SELECT email,password FROM user WHERE email=%s",(auth.username,)
@@ -39,7 +40,7 @@ def login():
               return "invalid credentials",401
       
 
-@server.route("/validate",method=["POST"])
+@server.route("/validate",methods=["POST"])
 def validate():
     encoded_jwt = request.headers["Authorization"]
 
@@ -50,7 +51,7 @@ def validate():
 
     try:
         decoded = jwt.decode(
-              encoded_jwt,os.environ.get("JWT_SECRET"),algorithm = ["HS256"]
+              encoded_jwt,os.environ.get("JWT_SECRET"),algorithm="HS256"
         )
     except:
         return "not authorized",403

@@ -9,7 +9,7 @@ def login(request):
 
      response = requests.post(
           
-              f"https://{os.environ.get('AUTH_SVC_ADDRESS')}/login",
+              f"http://{os.environ.get('AUTH_SVC_ADDRESS')}/login",
               auth=basicAuth
 
      )
