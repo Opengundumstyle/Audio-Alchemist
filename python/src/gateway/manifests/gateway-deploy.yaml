@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: opengundumstyle/gateway:renew
+          image: opengundumstyle/gateway:latest
           envFrom:
             - configMapRef:
                 name: gateway-configmap
